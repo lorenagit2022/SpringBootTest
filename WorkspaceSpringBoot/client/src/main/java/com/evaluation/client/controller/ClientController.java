@@ -1,0 +1,79 @@
+package com.evaluation.client.controller;
+
+import com.evaluation.client.entities.Client;
+import com.evaluation.client.exception.ClientException;
+import com.evaluation.client.exception.ClientNotFoundException;
+import com.evaluation.client.service.ClientService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+
+@RestController
+
+public class ClientController {
+    @Autowired
+    private ClientService clientService;
+
+
+    @GetMapping("/client/{identify}")
+    public ResponseEntity<?> getClientByIdentification(@PathVariable Integer identify) {
+        try {
+            return new ResponseEntity(clientService.findByIdentify(identify), HttpStatus.OK);
+        } catch (ClientNotFoundException mens) {
+            return new ResponseEntity(mens.getMessage(), HttpStatus.NOT_FOUND);
+        }
+    }
+
+    @GetMapping("/client/")
+    public List<Client> getAllClient() {
+        List<Client> listClient = clientService.findAllClients();
+        return listClient;
+    }
+
+
+    @PostMapping("/client/create")
+    public ResponseEntity createClient(@RequestBody Client client) {
+        try {
+            return new ResponseEntity(clientService.createClient(client), HttpStatus.OK);
+        }catch (ClientException mens){
+            return new ResponseEntity(HttpStatus.BAD_REQUEST);
+        }
+    }
+
+    @PostMapping("/client/update")
+    public ResponseEntity updateClient(@RequestBody Client client) {
+        try {
+            return new ResponseEntity(clientService.updateClient(client), HttpStatus.OK);
+        }catch (ClientNotFoundException mens){
+            return new ResponseEntity(mens.getMessage(), HttpStatus.NOT_FOUND);
+        }
+
+    }
+
+    @GetMapping("/client/activateClient/{identify}")
+    public ResponseEntity activateClient(@PathVariable Integer identify) {
+        try {
+            return new ResponseEntity(clientService.updateClientSatus(identify, true), HttpStatus.OK);
+        } catch (ClientNotFoundException mens) {
+            return new ResponseEntity(mens.getMessage(), HttpStatus.NOT_FOUND);
+        }
+    }
+
+    @GetMapping("/client/deactivateClient/{identify}")
+    public ResponseEntity deactivateClient(@PathVariable Integer identify) {
+        try {
+            return new ResponseEntity(clientService.updateClientSatus(identify, false), HttpStatus.OK);
+        } catch (ClientNotFoundException mens) {
+            return new ResponseEntity(mens.getMessage(), HttpStatus.NOT_FOUND);
+        }
+    }
+
+
+    @GetMapping("/client/delete/{identify}")
+    public ResponseEntity deleteClient(@PathVariable Integer identify) {
+        return new ResponseEntity(clientService.deleteClient(identify), HttpStatus.OK);
+    }
+}
