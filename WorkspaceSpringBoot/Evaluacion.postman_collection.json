@@ -1,0 +1,1824 @@
+{
+	"info": {
+		"_postman_id": "b75ebac8-ee7e-48cb-b84e-bb122577e576",
+		"name": "Evaluacion",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1091646"
+	},
+	"item": [
+		{
+			"name": "CLIENTE",
+			"item": [
+				{
+					"name": "CreacionCliente",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "Cliente Juan Lema OK",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"identify\": 5467891235,\r\n    \"name\": \"Jose Lema \",\r\n    \"gender\": \"MASCULINO\",\r\n    \"age\": 30,\r\n    \"direction\": \"otavalo sn y principa \",\r\n    \"phone\": 98254785,\r\n    \"password\": \"1234\",\r\n    \"status\": true\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8088/client/create",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8088",
+									"path": [
+										"client",
+										"create"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 12 Oct 2022 22:55:11 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 44,\n    \"identify\": \"5467891235\",\n    \"name\": \"Jose Lema \",\n    \"gender\": \"MASCULINO\",\n    \"age\": 30,\n    \"direction\": \"otavalo sn y principa \",\n    \"phone\": 98254785,\n    \"password\": \"1234\",\n    \"status\": true\n}"
+						}
+					]
+				},
+				{
+					"name": "ConsultarClientes",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "Todos Clientes OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8088/client/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8088",
+									"path": [
+										"client",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 12 Oct 2022 22:58:42 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 15,\n        \"identify\": \"1234567890\",\n        \"name\": \"Juan Osorio\",\n        \"gender\": \"MASCULINO\",\n        \"age\": 25,\n        \"direction\": \"13 junio y Equinoccial \",\n        \"phone\": 98874587,\n        \"password\": \"1245\",\n        \"status\": true\n    },\n    {\n        \"id\": 42,\n        \"identify\": \"9876543210\",\n        \"name\": \"Marianela Montalvo\",\n        \"gender\": \"FEMENINO\",\n        \"age\": 29,\n        \"direction\": \"Amazonas y NNUU \",\n        \"phone\": 97548965,\n        \"password\": \"5678\",\n        \"status\": true\n    },\n    {\n        \"id\": 44,\n        \"identify\": \"5467891235\",\n        \"name\": \"Jose Lema \",\n        \"gender\": \"MASCULINO\",\n        \"age\": 30,\n        \"direction\": \"otavalo sn y principa \",\n        \"phone\": 98254785,\n        \"password\": \"1234\",\n        \"status\": true\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "ConsultaClienteXCedula",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "Cliente con cedula OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8088/client/5467891235",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8088",
+									"path": [
+										"client",
+										"5467891235"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 12 Oct 2022 23:06:57 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 44,\n    \"identify\": \"5467891235\",\n    \"name\": \"Jose Lema \",\n    \"gender\": \"MASCULINO\",\n    \"age\": 30,\n    \"direction\": \"otavalo sn y principa \",\n    \"phone\": 98254785,\n    \"password\": \"1234\",\n    \"status\": true\n}"
+						}
+					]
+				},
+				{
+					"name": "ActualizarCliente",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "ClienteActaulizadoDirec OK",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 44,\r\n    \"identify\": \"5467891235\",\r\n    \"name\": \"Jose Lema \",\r\n    \"gender\": \"MASCULINO\",\r\n    \"age\": 20,\r\n    \"direction\": \"otavalo sn y principal ref bomberos \",\r\n    \"phone\": 98254785,\r\n    \"password\": \"1234\",\r\n    \"status\": true\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8088/client/update/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8088",
+									"path": [
+										"client",
+										"update",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 12 Oct 2022 23:12:08 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 44,\n    \"identify\": \"5467891235\",\n    \"name\": \"Jose Lema \",\n    \"gender\": \"MASCULINO\",\n    \"age\": 20,\n    \"direction\": \"otavalo sn y principal ref bomberos \",\n    \"phone\": 98254785,\n    \"password\": \"1234\",\n    \"status\": true\n}"
+						}
+					]
+				},
+				{
+					"name": "DesactivarCliente",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "ClienteDesactivado",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8088/client/deactivateClient/5467891235",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8088",
+									"path": [
+										"client",
+										"deactivateClient",
+										"5467891235"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 12 Oct 2022 23:14:26 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 44,\n    \"identify\": \"5467891235\",\n    \"name\": \"Jose Lema \",\n    \"gender\": \"MASCULINO\",\n    \"age\": 20,\n    \"direction\": \"otavalo sn y principal ref bomberos \",\n    \"phone\": 98254785,\n    \"password\": \"1234\",\n    \"status\": false\n}"
+						}
+					]
+				},
+				{
+					"name": "ActivarCliente",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "ClienteActivado OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8088/client/activateClient/5467891235",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8088",
+									"path": [
+										"client",
+										"activateClient",
+										"5467891235"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 12 Oct 2022 23:25:29 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 44,\n    \"identify\": \"5467891235\",\n    \"name\": \"Jose Lema \",\n    \"gender\": \"MASCULINO\",\n    \"age\": 20,\n    \"direction\": \"otavalo sn y principal ref bomberos \",\n    \"phone\": 98254785,\n    \"password\": \"1234\",\n    \"status\": true\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "CUENTA",
+			"item": [
+				{
+					"name": "CreaCuenta",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "CuentaJose",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"accountNumber\": 456123,\r\n    \"accountType\": \"AHORROS\",\r\n    \"balance\": 2000.0,\r\n    \"status\": true,\r\n    \"idClient\": 44,\r\n    \"nameClient\": null\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8089/account/create/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8089",
+									"path": [
+										"account",
+										"create",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 12 Oct 2022 23:33:45 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 46,\n    \"accountNumber\": 456123,\n    \"accountType\": \"AHORROS\",\n    \"balance\": 0,\n    \"status\": true,\n    \"idClient\": 44,\n    \"nameClient\": \"Jose Lema \"\n}"
+						},
+						{
+							"name": "CuentaMarianela",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"accountNumber\": 225487,\r\n    \"accountType\": \"CORRIENTE\",\r\n    \"balance\": 2000.0,\r\n    \"status\": true,\r\n    \"idClient\": 42,\r\n    \"nameClient\": null\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8089/account/create/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8089",
+									"path": [
+										"account",
+										"create",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 13 Oct 2022 00:21:03 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 50,\n    \"accountNumber\": 225487,\n    \"accountType\": \"CORRIENTE\",\n    \"balance\": 0,\n    \"status\": true,\n    \"idClient\": 42,\n    \"nameClient\": \"Marianela Montalvo\"\n}"
+						},
+						{
+							"name": "CuentaJuan",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"accountNumber\": 495878,\r\n    \"accountType\": \"AHORROS\",\r\n    \"balance\": 2000.0,\r\n    \"status\": true,\r\n    \"idClient\": 15,\r\n    \"nameClient\": null\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8089/account/create/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8089",
+									"path": [
+										"account",
+										"create",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 13 Oct 2022 00:22:21 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 51,\n    \"accountNumber\": 495878,\n    \"accountType\": \"AHORROS\",\n    \"balance\": 0,\n    \"status\": true,\n    \"idClient\": 15,\n    \"nameClient\": \"Juan Osorio\"\n}"
+						}
+					]
+				},
+				{
+					"name": "ActualizarCuenta",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "CuentaActualizadoState OK",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 46,\r\n    \"accountNumber\": 456123,\r\n    \"accountType\": \"AHORROS\",\r\n    \"balance\": 0,\r\n    \"status\": false,\r\n    \"idClient\": 44\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8089/account/update",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8089",
+									"path": [
+										"account",
+										"update"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 13 Oct 2022 00:01:57 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 46,\n    \"accountNumber\": 456123,\n    \"accountType\": \"AHORROS\",\n    \"balance\": 0,\n    \"status\": false,\n    \"idClient\": 44,\n    \"nameClient\": \"Jose Lema \"\n}"
+						}
+					]
+				},
+				{
+					"name": "ActivarCuenta",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "CuentaActivada OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8089/account/activateAccount/456123",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8089",
+									"path": [
+										"account",
+										"activateAccount",
+										"456123"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 13 Oct 2022 00:06:48 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 46,\n    \"accountNumber\": 456123,\n    \"accountType\": \"AHORROS\",\n    \"balance\": 0,\n    \"status\": true,\n    \"idClient\": 44,\n    \"nameClient\": \"Jose Lema \"\n}"
+						}
+					]
+				},
+				{
+					"name": "DesactivarCuenta",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "CuentaDesactivada OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8089/account/deactivateAccount/456123",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8089",
+									"path": [
+										"account",
+										"deactivateAccount",
+										"456123"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 13 Oct 2022 00:07:38 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 46,\n    \"accountNumber\": 456123,\n    \"accountType\": \"AHORROS\",\n    \"balance\": 0,\n    \"status\": false,\n    \"idClient\": 44,\n    \"nameClient\": \"Jose Lema \"\n}"
+						}
+					]
+				},
+				{
+					"name": "ConsultarCuentaXnumCuenta",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "CuentaExistente OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8089/account/456123",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8089",
+									"path": [
+										"account",
+										"456123"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 13 Oct 2022 00:09:13 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 46,\n    \"accountNumber\": 456123,\n    \"accountType\": \"AHORROS\",\n    \"balance\": 0,\n    \"status\": true,\n    \"idClient\": 44,\n    \"nameClient\": \"Jose Lema \"\n}"
+						},
+						{
+							"name": "CunetaNoExiste ERROR",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8089/account/4561232",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8089",
+									"path": [
+										"account",
+										"4561232"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain;charset=UTF-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "26"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 13 Oct 2022 00:09:59 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "Cuenta '4561232' no existe"
+						}
+					]
+				},
+				{
+					"name": "ConsultaCuentaXId",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "CuentaEncontrada OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8089/account/id/46",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8089",
+									"path": [
+										"account",
+										"id",
+										"46"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 13 Oct 2022 00:12:08 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 46,\n    \"accountNumber\": 456123,\n    \"accountType\": \"AHORROS\",\n    \"balance\": 0,\n    \"status\": true,\n    \"idClient\": 44,\n    \"nameClient\": \"Jose Lema \"\n}"
+						}
+					]
+				},
+				{
+					"name": "Consultar Cuentas",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "Cunetas existentes OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8089/account/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8089",
+									"path": [
+										"account",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 13 Oct 2022 00:17:59 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 22,\n        \"accountNumber\": 123456,\n        \"accountType\": \"AHORROS\",\n        \"balance\": 0,\n        \"status\": true,\n        \"idClient\": 15,\n        \"nameClient\": null\n    },\n    {\n        \"id\": 46,\n        \"accountNumber\": 456123,\n        \"accountType\": \"AHORROS\",\n        \"balance\": 0,\n        \"status\": true,\n        \"idClient\": 44,\n        \"nameClient\": null\n    },\n    {\n        \"id\": 48,\n        \"accountNumber\": 111222,\n        \"accountType\": \"AHORROS\",\n        \"balance\": 0,\n        \"status\": true,\n        \"idClient\": 44,\n        \"nameClient\": null\n    }\n]"
+						},
+						{
+							"name": "Cuentas exustentes",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8089/account/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8089",
+									"path": [
+										"account",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 13 Oct 2022 00:23:36 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 22,\n        \"accountNumber\": 123456,\n        \"accountType\": \"AHORROS\",\n        \"balance\": 0,\n        \"status\": true,\n        \"idClient\": 15,\n        \"nameClient\": null\n    },\n    {\n        \"id\": 46,\n        \"accountNumber\": 456123,\n        \"accountType\": \"AHORROS\",\n        \"balance\": 0,\n        \"status\": true,\n        \"idClient\": 44,\n        \"nameClient\": null\n    },\n    {\n        \"id\": 50,\n        \"accountNumber\": 225487,\n        \"accountType\": \"CORRIENTE\",\n        \"balance\": 0,\n        \"status\": true,\n        \"idClient\": 42,\n        \"nameClient\": null\n    },\n    {\n        \"id\": 51,\n        \"accountNumber\": 495878,\n        \"accountType\": \"AHORROS\",\n        \"balance\": 0,\n        \"status\": true,\n        \"idClient\": 15,\n        \"nameClient\": null\n    },\n    {\n        \"id\": 53,\n        \"accountNumber\": 496825,\n        \"accountType\": \"AHORROS\",\n        \"balance\": 0,\n        \"status\": true,\n        \"idClient\": 42,\n        \"nameClient\": null\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Eliminar Cuenta",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "Cunetas existentes OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8089/account/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8089",
+									"path": [
+										"account",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 13 Oct 2022 00:17:59 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 22,\n        \"accountNumber\": 123456,\n        \"accountType\": \"AHORROS\",\n        \"balance\": 0,\n        \"status\": true,\n        \"idClient\": 15,\n        \"nameClient\": null\n    },\n    {\n        \"id\": 46,\n        \"accountNumber\": 456123,\n        \"accountType\": \"AHORROS\",\n        \"balance\": 0,\n        \"status\": true,\n        \"idClient\": 44,\n        \"nameClient\": null\n    },\n    {\n        \"id\": 48,\n        \"accountNumber\": 111222,\n        \"accountType\": \"AHORROS\",\n        \"balance\": 0,\n        \"status\": true,\n        \"idClient\": 44,\n        \"nameClient\": null\n    }\n]"
+						},
+						{
+							"name": "Eliminar Cuentas",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8089/account/delete/111222",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8089",
+									"path": [
+										"account",
+										"delete",
+										"111222"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 13 Oct 2022 00:14:08 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 47,\n    \"accountNumber\": 111222,\n    \"accountType\": \"AHORROS\",\n    \"balance\": 0,\n    \"status\": true,\n    \"idClient\": 44,\n    \"nameClient\": null\n}"
+						},
+						{
+							"name": "Consultar Cuentas Copy",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8089/account/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8089",
+									"path": [
+										"account",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 13 Oct 2022 00:19:30 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 22,\n        \"accountNumber\": 123456,\n        \"accountType\": \"AHORROS\",\n        \"balance\": 0,\n        \"status\": true,\n        \"idClient\": 15,\n        \"nameClient\": null\n    },\n    {\n        \"id\": 46,\n        \"accountNumber\": 456123,\n        \"accountType\": \"AHORROS\",\n        \"balance\": 0,\n        \"status\": true,\n        \"idClient\": 44,\n        \"nameClient\": null\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "ActualizarSaldo",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "SaldoActualizado",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8089/account/updateBalance/53/1000",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8089",
+									"path": [
+										"account",
+										"updateBalance",
+										"53",
+										"1000"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 13 Oct 2022 00:28:56 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 53,\n    \"accountNumber\": 496825,\n    \"accountType\": \"AHORROS\",\n    \"balance\": 1000,\n    \"status\": true,\n    \"idClient\": 42,\n    \"nameClient\": \"Marianela Montalvo\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "MIOVIMIENTO",
+			"item": [
+				{
+					"name": "Movimientos Jose Lema",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "Crear cuenta Jose Lema",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"accountNumber\": 585545,\r\n    \"accountType\": \"CORRIENTE\",\r\n    \"balance\": 2000.0,\r\n    \"status\": true,\r\n    \"idClient\": 44,\r\n    \"nameClient\": null\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8089/account/create/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8089",
+									"path": [
+										"account",
+										"create",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 13 Oct 2022 00:39:29 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 55,\n    \"accountNumber\": 585545,\n    \"accountType\": \"CORRIENTE\",\n    \"balance\": 0,\n    \"status\": true,\n    \"idClient\": 44,\n    \"nameClient\": \"Jose Lema \"\n}"
+						},
+						{
+							"name": "Movimiento inicial 2000",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \r\n    \"movementType\": \"C\",\r\n    \"value\": 2000.0,\r\n    \"idAccount\": 55\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8090/movement/create",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"movement",
+										"create"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 13 Oct 2022 00:41:40 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 56,\n    \"movementType\": \"C\",\n    \"value\": 2000,\n    \"availableBalance\": 2000,\n    \"idAccount\": 55,\n    \"isLast\": true,\n    \"numberAccount\": 585545,\n    \"nameClient\": \"Jose Lema \",\n    \"date\": \"2022-10-13T00:41:40.437+00:00\"\n}"
+						},
+						{
+							"name": "Retiro 575",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \r\n    \"movementType\": \"D\",\r\n    \"value\": 575,\r\n    \"idAccount\": 55\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8090/movement/create",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"movement",
+										"create"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 13 Oct 2022 00:42:15 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 57,\n    \"movementType\": \"D\",\n    \"value\": 575,\n    \"availableBalance\": 1425,\n    \"idAccount\": 55,\n    \"isLast\": true,\n    \"numberAccount\": 585545,\n    \"nameClient\": \"Jose Lema \",\n    \"date\": \"2022-10-13T00:42:15.725+00:00\"\n}"
+						},
+						{
+							"name": "Deposito 600",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \r\n    \"movementType\": \"C\",\r\n    \"value\": 600,\r\n    \"idAccount\": 55\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8090/movement/create",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"movement",
+										"create"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 13 Oct 2022 00:42:42 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 58,\n    \"movementType\": \"C\",\n    \"value\": 600,\n    \"availableBalance\": 2025,\n    \"idAccount\": 55,\n    \"isLast\": true,\n    \"numberAccount\": 585545,\n    \"nameClient\": \"Jose Lema \",\n    \"date\": \"2022-10-13T00:42:42.370+00:00\"\n}"
+						},
+						{
+							"name": "Deposito 150",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \r\n    \"movementType\": \"C\",\r\n    \"value\": 150,\r\n    \"idAccount\": 55\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8090/movement/create",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"movement",
+										"create"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 13 Oct 2022 00:43:12 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 59,\n    \"movementType\": \"C\",\n    \"value\": 150,\n    \"availableBalance\": 2175,\n    \"idAccount\": 55,\n    \"isLast\": true,\n    \"numberAccount\": 585545,\n    \"nameClient\": \"Jose Lema \",\n    \"date\": \"2022-10-13T00:43:11.977+00:00\"\n}"
+						},
+						{
+							"name": "Retiro 540",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \r\n    \"movementType\": \"D\",\r\n    \"value\": 540,\r\n    \"idAccount\": 55\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8090/movement/create",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"movement",
+										"create"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 13 Oct 2022 00:43:34 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 60,\n    \"movementType\": \"D\",\n    \"value\": 540,\n    \"availableBalance\": 1635,\n    \"idAccount\": 55,\n    \"isLast\": true,\n    \"numberAccount\": 585545,\n    \"nameClient\": \"Jose Lema \",\n    \"date\": \"2022-10-13T00:43:34.351+00:00\"\n}"
+						},
+						{
+							"name": "Retiro 2000",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \r\n    \"movementType\": \"D\",\r\n    \"value\": 2000,\r\n    \"idAccount\": 55\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8090/movement/create",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"movement",
+										"create"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain;charset=UTF-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "19"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 13 Oct 2022 00:44:18 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "Saldo NO disponible"
+						}
+					]
+				},
+				{
+					"name": "ConsultaCuentas",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "FinalmenteLaCuentaJose",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8089/account/id/55",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8089",
+									"path": [
+										"account",
+										"id",
+										"55"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 13 Oct 2022 00:45:24 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 55,\n    \"accountNumber\": 585545,\n    \"accountType\": \"CORRIENTE\",\n    \"balance\": 1635,\n    \"status\": true,\n    \"idClient\": 44,\n    \"nameClient\": \"Jose Lema \"\n}"
+						}
+					]
+				},
+				{
+					"name": "ConsultaUltimoMovimiento",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "UltimoMovimientoJose",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8090/movement/last/55",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"movement",
+										"last",
+										"55"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 13 Oct 2022 00:46:50 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 60,\n    \"movementType\": \"D\",\n    \"value\": 540,\n    \"availableBalance\": 1635,\n    \"idAccount\": 55,\n    \"isLast\": true,\n    \"numberAccount\": 585545,\n    \"nameClient\": \"Jose Lema \",\n    \"date\": \"2022-10-12\"\n}"
+						}
+					]
+				},
+				{
+					"name": "ConsultaPorCUentaYFechas",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "MovimientosPorFecha",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8090/movement/dateBetween/55/01-01-2022/05-10-2022",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"movement",
+										"dateBetween",
+										"55",
+										"01-01-2022",
+										"05-10-2022"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 13 Oct 2022 03:03:54 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 56,\n        \"movementType\": \"C\",\n        \"value\": 2000,\n        \"availableBalance\": 2000,\n        \"idAccount\": 55,\n        \"isLast\": false,\n        \"numberAccount\": null,\n        \"nameClient\": null,\n        \"date\": \"2022-10-04\"\n    }\n]"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "REPORTE",
+			"item": [
+				{
+					"name": "ResporteXUsuarioYFechas",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "EstadoCuenta",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8091/report/5467891235/01-01-2022/05-11-2022",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8091",
+									"path": [
+										"report",
+										"5467891235",
+										"01-01-2022",
+										"05-11-2022"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 13 Oct 2022 12:59:14 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": null,\n        \"movementDate\": \"2022-10-13T00:00:00.000+00:00\",\n        \"nameClient\": \"Jose Lema \",\n        \"accountNumber\": 456123,\n        \"accountType\": \"AHORROS\",\n        \"balance\": 2000,\n        \"accountState\": true,\n        \"movementType\": \"C\",\n        \"value\": 2000,\n        \"movementBBalance\": 2000\n    },\n    {\n        \"id\": null,\n        \"movementDate\": \"2022-10-04T00:00:00.000+00:00\",\n        \"nameClient\": \"Jose Lema \",\n        \"accountNumber\": 585545,\n        \"accountType\": \"CORRIENTE\",\n        \"balance\": 1635,\n        \"accountState\": true,\n        \"movementType\": \"C\",\n        \"value\": 2000,\n        \"movementBBalance\": 2000\n    },\n    {\n        \"id\": null,\n        \"movementDate\": \"2022-10-07T00:00:00.000+00:00\",\n        \"nameClient\": \"Jose Lema \",\n        \"accountNumber\": 585545,\n        \"accountType\": \"CORRIENTE\",\n        \"balance\": 1635,\n        \"accountState\": true,\n        \"movementType\": \"D\",\n        \"value\": 575,\n        \"movementBBalance\": 1425\n    },\n    {\n        \"id\": null,\n        \"movementDate\": \"2022-10-10T00:00:00.000+00:00\",\n        \"nameClient\": \"Jose Lema \",\n        \"accountNumber\": 585545,\n        \"accountType\": \"CORRIENTE\",\n        \"balance\": 1635,\n        \"accountState\": true,\n        \"movementType\": \"C\",\n        \"value\": 600,\n        \"movementBBalance\": 2025\n    },\n    {\n        \"id\": null,\n        \"movementDate\": \"2022-10-12T00:00:00.000+00:00\",\n        \"nameClient\": \"Jose Lema \",\n        \"accountNumber\": 585545,\n        \"accountType\": \"CORRIENTE\",\n        \"balance\": 1635,\n        \"accountState\": true,\n        \"movementType\": \"C\",\n        \"value\": 150,\n        \"movementBBalance\": 2175\n    },\n    {\n        \"id\": null,\n        \"movementDate\": \"2022-10-12T00:00:00.000+00:00\",\n        \"nameClient\": \"Jose Lema \",\n        \"accountNumber\": 585545,\n        \"accountType\": \"CORRIENTE\",\n        \"balance\": 1635,\n        \"accountState\": true,\n        \"movementType\": \"D\",\n        \"value\": 540,\n        \"movementBBalance\": 1635\n    }\n]"
+						}
+					]
+				}
+			]
+		}
+	]
+}
